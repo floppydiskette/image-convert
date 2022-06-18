@@ -107,11 +107,6 @@ pub fn compute_output_size(
     let wr = input_width_f64 / width_f64;
     let hr = input_height_f64 / height_f64;
 
-    if wr >= hr {
-        height = (width_f64 / ratio).round() as u16;
-    } else {
-        width = (height_f64 * ratio).round() as u16;
-    }
 
     Some((width, height))
 }
